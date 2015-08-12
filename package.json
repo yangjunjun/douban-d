@@ -1,6 +1,6 @@
 {
   "name": "douban-d",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "download images from douban.com",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yangjunjun/doubanD.git"
+    "url": "git+https://github.com/yangjunjun/douban-d.git"
   },
   "keywords": [
     "douban",
