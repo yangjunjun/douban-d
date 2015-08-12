@@ -12,12 +12,18 @@
   },
   "keywords": [
     "douban",
-    "download"
+    "download",
+    "image"
   ],
-  "author": "yangjunjun",
+  "author": "yangjunjun(ggiiss@qq.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/yangjunjun/doubanD/issues"
   },
-  "homepage": "https://github.com/yangjunjun/doubanD#readme"
+  "homepage": "https://github.com/yangjunjun/doubanD#readme",
+  "dependencies": {
+    "cheerio": "^0.19.0",
+    "mkdirp": "^0.5.1",
+    "request": "^2.60.0"
+  }
 }

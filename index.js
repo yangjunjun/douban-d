@@ -10,13 +10,13 @@ var headers = {
   'User-Agent': 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.62 Safari/537.36'
 }
 
-var bddps = function(option) {
+var doubanD = function(option) {
 
   var requestOption = {
     url: option.url,
     headers: headers
   }
-  var fileFolder = option.location || 'img';
+  var fileFolder = option.location || '';
   fileFolder = option.random ? fileFolder + Math.floor(Math.random()*100):
                fileFolder;
 
@@ -29,7 +29,7 @@ var bddps = function(option) {
         $('.photo_wrap img').each(function() {
           var imgUrl = $(this).attr('src'); 
           // src == > http://img4.douban.com/view/photo/thumb/public/p2256024648.jpg
-          imgUrl = imgUrl.replace('thumb', option.size);
+          imgUrl = imgUrl.replace('thumb', option.size || 'photo');
           var filename = path.basename(imgUrl);
           var fileLocation = path.join(fileFolder, filename);
           request(imgUrl).pipe(fs.createWriteStream(fileLocation));
@@ -42,4 +42,4 @@ var bddps = function(option) {
 }
 
 
-module.exports = bddps;
+module.exports = doubanD;
